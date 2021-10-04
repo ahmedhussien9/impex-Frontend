@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { finalize } from 'rxjs/operators';
+import { AuthService } from 'src/app/core/auth/service/auth.service';
 import { UploadSingleFileClass } from 'src/app/shared/classes/uploadSingleFile/uploadSingleFile.class';
 import { HttpProductService } from 'src/app/views/home/services/products.service';
 
@@ -19,7 +20,8 @@ export class AddProductsComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private httpProdcutService: HttpProductService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private authService: AuthService
   ) {
   }
 
@@ -33,7 +35,7 @@ export class AddProductsComponent implements OnInit {
       "notes": "",
       "image": "",
       "description": "",
-      "seller": "Mansour"
+      "seller": this.authService.getSellerName()
     })
   }
 

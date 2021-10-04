@@ -26,12 +26,13 @@ export class AuthService {
   setUserData(body) {
     localStorage.setItem('userData', JSON.stringify(body));
   }
-  
+
   getUserData() {
     return JSON.parse(localStorage.getItem("userData"));
   }
 
   getSellerName() {
+    this.getUserData().name;
   }
   // getUserData() {
   //   return this.httpClient.get(`${this.baseUrl}User/${}`)

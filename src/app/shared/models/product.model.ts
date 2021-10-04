@@ -10,4 +10,6 @@ export interface Product {
     unitPrice: number;
     notes: string;
     seller: string;
+    image?: string;
+    description?: string;
 }

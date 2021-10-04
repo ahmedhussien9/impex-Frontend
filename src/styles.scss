@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-@import '~ngx-toastr/toastr';
+@import "~ngx-toastr/toastr";
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
@@ -117,4 +117,13 @@ ngx-intl-tel-input input[disabled] {
     font-weight: 500;
     color: #4d4d4d;
     margin-bottom: 0.5rem;
+}
+
+
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.label {
+    font-weight: bold;
 }

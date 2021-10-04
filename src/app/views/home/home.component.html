@@ -37,7 +37,8 @@
             <div class="row">
                 <div class="col-md-3" *ngFor="let product of product$ | async">
                     <app-single-product [product]="product">
-                        <app-action-button [title]="'Request for quotation'" class="singleButton" [display]="'block'" [width]="'100%'"></app-action-button>
+                        <app-action-button [title]="'Request for quotation'" class="singleButton" [display]="'block'"
+                            [width]="'100%'" (isClicked)="requestQuotation(product)"></app-action-button>
                     </app-single-product>
                 </div>
             </div>

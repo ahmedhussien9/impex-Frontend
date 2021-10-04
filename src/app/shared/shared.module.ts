@@ -43,7 +43,7 @@ import { FilesUploadIconComponent } from './components/files-upload-icon/files-u
     SubmitBtnComponent,
     SingleProductComponent,
     ActionButtonComponent,
-    FilesUploadIconComponent
+    FilesUploadIconComponent,
   ],
   exports: [
     FormsModule,
@@ -59,7 +59,7 @@ import { FilesUploadIconComponent } from './components/files-upload-icon/files-u
     // Components
     SingleProductComponent,
     ActionButtonComponent,
-    FilesUploadIconComponent
+    FilesUploadIconComponent,
   ],
   providers: [
     DatePipe

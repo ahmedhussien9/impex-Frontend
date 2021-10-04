@@ -16,3 +16,13 @@
         }
     }
 }
+
+.group-button {
+    display: flex;
+    gap: 15px;
+    .btn {
+        width: 50%;
+        border: 1px solid #999;
+        border-radius: 8px;
+    }
+}
