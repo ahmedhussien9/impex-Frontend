@@ -30,4 +30,21 @@ export class HttpProductService {
         })
     }
 
+    editProductApi(body, hsCode) {
+        return this.httpClient.put(`${this.baseUrl}Product/${hsCode}`, body, {
+            observe: "response"
+        })   
+    }
+
+    getSingleProductApi(hsCode) {
+        return this.httpClient.get<Product>(`${this.baseUrl}Product/${hsCode}`, {
+            observe: "response"
+        })
+    }
+    deleteProduct(hsCode) {
+        return this.httpClient.delete(`${this.baseUrl}Product/${hsCode}`,{
+            observe: "response"
+        })
+    }
+
 }

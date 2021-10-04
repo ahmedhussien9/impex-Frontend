@@ -4,7 +4,7 @@
             <h1>My Products</h1>
         </div>
         <div class="wrapper-management__header__action">
-            <app-action-button [title]="'Add Product'" (isClicked)="addNewProduct()"></app-action-button>
+            <app-action-button [title]="'Add Product'" [routerLink]="['add-product']"></app-action-button>
         </div>
     </div>
 
@@ -12,6 +12,10 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4" *ngFor="let product of product$ | async">
                 <app-single-product [product]="product">
+                    <div class="group-button">
+                        <button class="btn" [routerLink]="['edit-product', product.HSCode]">Edit</button>
+                        <button class="btn" (click)="deleteProduct(product)">Delete</button>
+                    </div>
                 </app-single-product>
             </div>
         </div>

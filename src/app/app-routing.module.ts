@@ -15,6 +15,10 @@ const routes: Routes = [
         path: 'user-management',
         loadChildren: () => import("./views/user-management/user-management.module").then((m) => m.UserManagementModule)
       },
+      {
+        path: 'request-quotation/:id',
+        loadChildren: () => import("./views/request-quotation/request-quotation.module").then((m) => m.RequestQuotationModule)
+      },
     ],
 
   },

@@ -1,0 +1,39 @@
+.wrapper {
+    min-height: 50vh;
+    margin: 2rem 3rem;
+    &__header {
+        display: flex;
+        width: 100%;
+        &__title {
+            flex-grow: 1;
+        }
+    }
+
+    .body {
+        .form {
+            background: #fff;
+            padding: 1rem 0rem;
+            padding: 1.5rem 1rem;
+        }
+        .item {
+            flex-grow: 3;
+            display: flex;
+        }
+    }
+    @media screen and (min-width: 1119px) {
+        .body {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            width: 100%;
+            .form {
+
+                width: 74%;
+            }
+            .item {
+                width: 250px;
+                margin-top: -1rem;
+            }
+        }
+    }
+}
