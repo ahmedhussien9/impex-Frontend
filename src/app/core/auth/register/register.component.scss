@@ -1,0 +1,94 @@
+.register-container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    background: #fff;
+    .backButton {
+        top: 3%;
+        left: 5%;
+        position: absolute;
+        a {
+            color: #1488cc;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+    .register-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        width: 350px;
+        padding: 0rem 5rem;
+        .register-card-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            &__logo {
+            }
+            &__title {
+                margin: 1.5rem 0rem;
+                font-size: 25px;
+                font-weight: 600;
+                span {
+                    color: #63b5ff;
+                }
+            }
+        }
+        .register-card-body {
+            margin: 0rem 0rem 0.5rem 0rem;
+            width: 100%;
+            .form-container {
+                .form-group {
+                    margin: 0rem 0rem;
+                    .label {
+                        font-weight: 500;
+                        margin: 0.5rem 0rem;
+                    }
+                    .form-control {
+                        border-radius: 2px;
+                    }
+                }
+
+                .form-check {
+                    margin: 0.5rem 0rem;
+                }
+            }
+
+            .register-card-submit {
+                margin: 1.5rem 0rem;
+            }
+            .register-company {
+                display: flex;
+                justify-content: center;
+                &__link {
+                    color: #1488cc;
+                    cursor: pointer;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .register-bg {
+        flex-grow: 4;
+        background-image: url(/assets/images/login-bg.png);
+        background-repeat: no-repeat;
+        background-position: 100% 80%;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .register-card {
+        width: 100% !important;
+        overflow: auto;
+    }
+    .register-bg {
+        display: none;
+    }
+}
+

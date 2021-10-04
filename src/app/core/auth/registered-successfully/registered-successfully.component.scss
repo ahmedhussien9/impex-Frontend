@@ -1,0 +1,73 @@
+.register-successfully-container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    .backButton {
+        top: 3%;
+        left: 5%;
+        position: absolute;
+        a {
+            color: #1488cc;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+    .register-successfully-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        width: 350px;
+        padding: 0rem 5rem;
+        .register-successfully-card-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            &__logo {
+            }
+            &__title {
+                margin: 1.5rem 0rem;
+                font-size: 25px;
+                font-weight: 600;
+                span {
+                    color: #63b5ff;
+                }
+            }
+        }
+        .register-successfully-card-body {
+            margin: 0rem 0rem 0.5rem 0rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            img {
+                margin: 1.5rem 0rem;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+    .register-successfully-bg {
+        flex-grow: 4;
+        background-image: url(/assets/images/login-bg.png);
+        background-repeat: no-repeat;
+        background-position: 100% 80%;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .register-card {
+        width: 100% !important;
+        overflow: auto;
+    }
+    .register-bg {
+        display: none;
+    }
+}
+

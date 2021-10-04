@@ -1,0 +1,62 @@
+<div class="wrapper-management">
+    <div class="wrapper-management__header">
+        <div class="wrapper-management__header__title">
+            <h1>Add Product</h1>
+        </div>
+        <div class="wrapper-management__header__action">
+            <a [routerLink]="['/dash', 'user-management', 'my-products']">My Products</a>
+        </div>
+    </div>
+
+    <div class="wrapper-management__body">
+        <form [formGroup]="formGroup">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="form-group">
+                        <label for="" class="label">Product Name</label>
+                        <input type="text" class="form-control" formControlName="name">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="form-group">
+                        <label for="" class="label">HS code</label>
+                        <input type="text" class="form-control" formControlName="HSCode">
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="form-group">
+                        <label for="" class="label">Minimum Order Quantity</label>
+                        <input type="text" class="form-control" formControlName="mOQ">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="form-group">
+                        <label for="" class="label">Unit Price</label>
+                        <input type="number" class="form-control" formControlName="unitPrice">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="form-group">
+                        <app-files-upload-icon [attachmentDocumentsFiles]="file"
+                            (onSelectFileEvent)="onSelectFileOfficalLetter($event)" [title]="'Upload Document'">
+                        </app-files-upload-icon>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="form-group">
+                        <label for="" class="label">Prouct Description</label>
+                        <textarea name="" class="form-control" formControlName="description" id="" cols="30" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <app-submit-btn [loading]="loading" [title]="'Save Product'" (isClickedEvent)="submit()"></app-submit-btn>
+
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

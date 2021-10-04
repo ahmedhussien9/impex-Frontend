@@ -1,0 +1,18 @@
+.wrapper-management {
+    background: #fff;
+    min-height: 50vh;
+    padding: 1.5rem;
+    &__header {
+        display: flex;
+        width: 100%;
+        margin-bottom: 1rem;
+        &__title {
+            flex-grow: 1;
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        &__action {
+        }
+    }
+}

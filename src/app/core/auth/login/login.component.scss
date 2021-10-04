@@ -1,0 +1,90 @@
+.login-container {
+  height: 100vh;
+  background-image: url(/assets/images/login-bg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .backButton {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+}
+}
+
+.login-card {
+  width: 474px;
+  height: 559px;
+  margin: 0rem auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.161);
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  padding: 5rem 4rem;
+}
+
+.login-card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__logo {
+  }
+  &__title {
+    margin: 1.5rem 0rem;
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+.login-card-body {
+  margin: 1rem 0rem 0.5rem 0rem;
+  .form-container {
+    .form-group {
+      margin: 0.5rem 0rem;
+      .label {
+        font-weight: 500;
+        margin: 0.5rem 0rem;
+      }
+      .form-control {
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .login-card-submit {
+    margin: 1.5rem 0rem;
+  }
+  .register-company {
+    display: flex;
+    justify-content: center;
+    &__link {
+      color: #1488cc;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-card {
+    top: initial;
+    left: initial;
+    position: initial;
+    transform: initial;
+    width: 95%;
+    padding: 5rem 1.5rem;
+    height: auto;
+  }
+}

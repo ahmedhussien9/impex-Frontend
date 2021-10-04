@@ -1,0 +1,46 @@
+<div class="home">
+    <div class="home-header-container">
+        <div class="home-header">
+            <div class="title">
+                <h1>Connecting Dots Together</h1>
+            </div>
+            <div class="bottom">
+                <p class="bottom__title"> Select Category, sub category or search by product directly</p>
+                <div class="filter-container">
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option selected>Select Category</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option selected>Select Category</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option selected>Select Category</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search by product name...">
+                    </div>
+                    <div class="form-submit">
+                        <button class="btn">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="product-list">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" *ngFor="let product of product$ | async">
+                    <app-single-product [product]="product">
+                        <app-action-button [title]="'Request for quotation'" class="singleButton" [display]="'block'" [width]="'100%'"></app-action-button>
+                    </app-single-product>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

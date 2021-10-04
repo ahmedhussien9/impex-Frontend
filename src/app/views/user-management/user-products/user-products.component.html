@@ -1,0 +1,19 @@
+<div class="wrapper-management">
+    <div class="wrapper-management__header">
+        <div class="wrapper-management__header__title">
+            <h1>My Products</h1>
+        </div>
+        <div class="wrapper-management__header__action">
+            <app-action-button [title]="'Add Product'" (isClicked)="addNewProduct()"></app-action-button>
+        </div>
+    </div>
+
+    <div class="wrapper-management__body">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let product of product$ | async">
+                <app-single-product [product]="product">
+                </app-single-product>
+            </div>
+        </div>
+    </div>
+</div>

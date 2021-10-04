@@ -1,0 +1,29 @@
+<section class="login-container">
+
+  <div class="login-card">
+    <div class="login-card-header">
+      <img src="./assets/images/Impex-Logo.png" class="login-card-header__logo">
+      <h1 class="login-card-header__title">Welcome Back To IMPEX</h1>
+    </div>
+    <div class="login-card-body">
+      <form class="form-container" [formGroup]="formGroup">
+        <div class="form-group">
+          <label class="label">Company email</label>
+          <input class="form-control" placeholder="Company email" type="email" formControlName="companyName">
+        </div>
+        <div class="form-group">
+          <label class="label">Password</label>
+          <input class="form-control" placeholder="Password" formControlName="participantKey" type="password">
+        </div>
+        <div class="login-card-submit">
+          <app-submit-btn [loading]="loading" [title]="'Login'" (isClickedEvent)="login()"></app-submit-btn>
+        </div>
+
+        <div class="register-company">
+          <a class="register-company__link" [routerLink]="['/auth/register']">Register your company</a>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>

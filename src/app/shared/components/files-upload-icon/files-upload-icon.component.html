@@ -1,0 +1,22 @@
+<!-- <div class="upload-multiple-files">
+    <article class="upload-multiple-files__inputContainer">
+        <button class="btn" mat-button>
+            <mat-icon>
+                cloud_upload
+            </mat-icon>
+            {{title}}
+            <input type="file"  />
+        </button>
+    </article>
+</div> -->
+
+<!-- <div class="custom-file">
+    <input type="file" name="files[]" multiple class="btn btn-default" id="customFile">
+    <label class="custom-file-label" for="customFile">Choose file</label>
+</div> -->
+
+<div class="custom-file">
+    <input type="file" class="custom-file-input" id="exampleInputFile" data-iconName="fa fa-upload"
+        (change)="onSelectFile($event)">
+    <!-- <label class="custom-file-label" for="exampleInputFile" [attr.data-browse]="'browse'"> Please choose file</label> -->
+</div>
