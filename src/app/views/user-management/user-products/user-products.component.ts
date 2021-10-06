@@ -36,6 +36,7 @@ export class UserProductsComponent implements OnInit {
       })
     }
   }
+  
   // confirmDelete(body): void {
   //   const lang = localStorage.getItem('LOCALIZE_DEFAULT_LANGUAGE');
   //   const message = lang === "en" ? `Are you sure you want to delete this item?` : `هل أنت متأكد أنك تريد المضي قدمًا فى الحذف ؟`;

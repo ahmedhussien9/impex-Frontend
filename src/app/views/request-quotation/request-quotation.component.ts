@@ -16,6 +16,7 @@ export class RequestQuotationComponent implements OnInit {
   loading = false;
   product: Product;
   hsCodeId: string;
+  INCO_LIST = ["FOB"]
   constructor(
     private fb: FormBuilder,
     private toastr: ToastrService,
