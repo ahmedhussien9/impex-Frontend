@@ -37,20 +37,5 @@ export class UserProductsComponent implements OnInit {
     }
   }
   
-  // confirmDelete(body): void {
-  //   const lang = localStorage.getItem('LOCALIZE_DEFAULT_LANGUAGE');
-  //   const message = lang === "en" ? `Are you sure you want to delete this item?` : `هل أنت متأكد أنك تريد المضي قدمًا فى الحذف ؟`;
-  //   const title = lang === "en" ? "Confirm delete action" : 'تأكيد عملية الحذف';
-  //   const dialogData = new ConfirmDialogModel(title, message);
-  //   const dialogRef = this.dialogRef.open(ConfirmDialogComponent, {
-  //     maxWidth: "400px",
-  //     data: dialogData
-  //   });
-  //   dialogRef.afterClosed().subscribe(dialogResult => {
-  //     if (dialogResult) {
-  //       this.delete(body);
-  //     }
-  //   });
-  // }
 
 }

@@ -6,7 +6,6 @@ import {
   SidebarService,
 } from 'src/app/shared/services/sidebar.service';
 
-
 @Component({
   selector: 'app-adminlayout',
   templateUrl: './adminlayout.component.html',
@@ -21,11 +20,10 @@ export class AdminlayoutComponent implements OnInit {
   subLinksIcon: string;
   dir: 'rtl' | 'ltr';
 
-
   constructor(
     private readonly sidebarservice: SidebarService,
     private readonly router: Router,
-    private readonly route: ActivatedRoute,
+    private readonly route: ActivatedRoute
   ) {}
 
   ngOnInit() {
@@ -57,15 +55,7 @@ export class AdminlayoutComponent implements OnInit {
       });
   }
 
-  close() {
-  }
-
-  open() {
-  }
-
-  switchLang(): void {
-  }
-
+  
   reload(): void {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.onSameUrlNavigation = 'reload';
@@ -74,15 +64,5 @@ export class AdminlayoutComponent implements OnInit {
     });
   }
 
-  checkMediaQuery(): void {
-    // this.breakpointObserver
-    //   .observe(['(max-width: 1300px)'])
-    //   .subscribe((state: BreakpointState) => {
-    //     if (state.matches) {
-    //       this.close();
-    //     } else {
-    //       this.open();
-    //     }
-    //   });
-  }
+  checkMediaQuery(): void {}
 }

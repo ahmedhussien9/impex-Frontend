@@ -1,93 +1,105 @@
 <div class="wrapper">
-    <div class="wrapper__header">
-        <div class="wrapper__header__title">
-
-        </div>
-        <div class="wrapper__header__action">
-            <!-- <app-action-button [title]="'Add Product'"></app-action-button> -->
-        </div>
+  <div class="wrapper__header">
+    <div class="wrapper__header__title"></div>
+    <div class="wrapper__header__action">
+      <!-- <app-action-button [title]="'Add Product'"></app-action-button> -->
     </div>
-    <div class="body">
-        <div class="form">
-            <h1>Request Quotation</h1>
-            <p>Please fill in the following info to complete your request.</p>
-            <form>
-                <div class="row">
-                    <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                            <label for="" class="label">Importer</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                            <label for="" class="label">Offered price</label>
-                            <input type="number" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                            <label for="" class="label">Quantity</label>
-                            <input type="number" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                            <label for="" class="label">Unit</label>
-                            <input type="number" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                            <label for="" class="label">Unit Price</label>
-                            <input type="number" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                            <label for="" class="label">INCO Term</label>
-                            <select name="" id="" class="form-control">
-                                <option *ngFor="let value of INCO_LIST" [value]="value">{{value}}</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                            <label for="" class="label">Latest Shipment Date</label>
-                            <input type="date" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                            <label for="" class="label">Port of charge</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                            <label for="" class="label">Port of loading</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="form-group">
-                            <!-- <app-files-upload-icon [attachmentDocumentsFiles]="file"
-                                    (onSelectFileEvent)="onSelectFileOfficalLetter($event)" [title]="'Upload Document'">
-                                </app-files-upload-icon> -->
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <app-submit-btn [loading]="loading" [title]="'Save Product'" (isClickedEvent)="submit()">
-                        </app-submit-btn>
-                    </div>
-                </div>
-            </form>
-
+  </div>
+  <div class="body">
+    <div class="form">
+      <h1>Request Quotation</h1>
+      <p>Please fill in the following info to complete your request.</p>
+      <form [formGroup]="formGroup">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="form-group">
+              <label for="" class="label">Offered price</label>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="offeringPrice"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="form-group">
+              <label for="" class="label">Quantity</label>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="quantity"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="form-group">
+              <label for="" class="label">Payment Terms</label>
+              <select class="form-control" formControlName="notes">
+                <option selected value="">Please select option</option>
+                <option *ngFor="let value of PAYMENT_TERMS" [value]="value">
+                  {{ value }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="form-group">
+              <label for="" class="label">INCO Terms</label>
+              <select class="form-control" formControlName="shippingTerms">
+                <option selected value="">Please select option</option>
+                <option *ngFor="let value of INCO_LIST" [value]="value">
+                  {{ value }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="form-group">
+              <label for="" class="label">Latest Shipment Date</label>
+              <input
+                type="date"
+                class="form-control"
+                (change)="selectDate($event)"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="form-group">
+              <label for="" class="label">Port of discharge</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="shipeTo"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="form-group">
+              <label for="" class="label">Port of loading</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="shipeFrom"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="form-group">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <app-submit-btn
+              [loading]="loading"
+              [title]="'Request For Quotation'"
+              (isClickedEvent)="submit()"
+            >
+            </app-submit-btn>
+          </div>
         </div>
-        <div class="item">
-            <app-single-product [product]="product">
-
-            </app-single-product>
-        </div>
-
+      </form>
     </div>
+    <div class="item">
+      <app-single-product [product]="product"> </app-single-product>
+    </div>
+  </div>
+</div>

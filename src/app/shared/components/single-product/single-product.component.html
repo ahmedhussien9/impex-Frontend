@@ -1,5 +1,5 @@
 <div class="product">
-    <img [src]="splitImg(product.notes)" class="img-fluid">
+    <img *ngIf="product.notes" [src]="splitImg(product.notes)" class="img-fluid">
     <div class="info">
         <h5>{{product.name}}</h5>
         <div class="exporter">
@@ -12,8 +12,7 @@
         <ul class="details">
             <li>Price per Unit: <strong>{{product.unitPrice | currency : "$"}}</strong></li>
             <li>Unit: <strong>{{product.mOQ}}</strong></li>
-            <li>Minimum order quantity : <strong>{{product.HSCode}}</strong></li>
-            <li>Price per Unit: <strong>20$</strong></li>
+            <li>Minimum order quantity : <strong>{{product.mOQ}}</strong></li>
         </ul>
         <div class="action-btn">
             <ng-content select=".singleButton"></ng-content>

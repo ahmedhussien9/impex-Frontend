@@ -119,11 +119,15 @@ ngx-intl-tel-input input[disabled] {
     margin-bottom: 0.5rem;
 }
 
-
-
 .form-group {
     margin-bottom: 1rem;
 }
 .label {
     font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        margin: 2rem 0rem !important;
+    }
 }
