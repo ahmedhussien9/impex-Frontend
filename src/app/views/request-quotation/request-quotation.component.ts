@@ -78,6 +78,7 @@ export class RequestQuotationComponent implements OnInit {
   getUnit(unit) {
     return unit.split(' ')[1];
   }
+  
   submit() {
     const body = {
       $class: 'org.acme.supply_chain_network.BuyerSendRFQ',
